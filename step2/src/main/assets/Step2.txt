@@ -1,0 +1,26 @@
+------------------------------------------------------------------------------
+------------                                                     -------------
+------------                        STEP 2                       -------------
+------------                                                     -------------
+------------------------------------------------------------------------------
+
+Objetivo:
+-----------
+Ahora que tenemos nuestra BrowseView algo más configurada, es hora de pintar contenido en ella.
+
+Tips:
+-------
+- Nuestra BrowseView tiene un método paintAwesomePlaces(...) que podemos utilizar para pintar nuestro
+  contenido:
+
+  ArrayObjectAdapter => de tipo ListRow. Agrupará todas las categorías
+  for (categoryList) {
+    ArrayObjectAdapter listRowAdapter => De tipo CardItemPresenter
+    for (category.getAwesomePlaceList()) {
+        //Añadimos al listRpwAdapter el awesomePlace
+    }
+    HeaderItem header => con el nombre de la categoría
+    this.add();
+  }
+
+- Utiliza los métodos buildDescriptionImagecardView() y buildImageOnlyImageCardView() de CardItemPresenter

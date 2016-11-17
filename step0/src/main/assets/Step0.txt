@@ -1,0 +1,22 @@
+------------------------------------------------------------------------------
+------------                                                     -------------
+------------                        STEP 0                       -------------
+------------                                                     -------------
+------------------------------------------------------------------------------
+
+Objetivo:
+-----------
+Tenemos una aplicación compatible con dispositivos móviles que hay que adaptar para que sea
+compatible también con TV. Como actualmente utiliza la cámara cuando hacemos click sobr ele botón,
+vamos a modificar su comportamiento en tiempo de ejecución para que, en caso de que se esté ejecutando
+en una TV, coja una imágen de los recursos y la ponga de fondo de pantalla.
+
+Tips:
+-------
+- Nuestra main activity tiene que estar categorizada como CATEGORY_LEANBACK_LUNCHER
+- Para que nuestra aplicación aparezca en playstore necesita <uses-feature android:name="android.software.leanback"/>
+  pero tenemos que marcarlo como opcional o dejará de ser compatible en dispotivos móviles.
+- Es obligatario que <uses-feature android:name="android.hardware.touchscreen"/> y
+  <uses-feature android:name="android.hardware.camera"/> sea opcional.
+- InitializePhotoController en MainView inicializa el controlador que ejecutará la acción al pulsar el botón,
+  es buen sitio para injectar otro comportamiento si el dispositvo no dispone de cámara.

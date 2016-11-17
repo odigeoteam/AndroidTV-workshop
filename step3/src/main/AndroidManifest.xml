@@ -1,0 +1,56 @@
+<manifest package="pabloazana.step3"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.software.touchscreen"
+        android:required="false"/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Leanback"
+        android:banner="@mipmap/banner">
+
+        <activity
+            android:name="pabloazana.presentation.views.navigator.WelcomeNavigatorImp"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="pabloazana.presentation.views.navigator.BrowseNavigatorImp"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Leanback">
+
+            <intent-filter>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="pabloazana.presentation.views.navigator.SearchNavigatorImp"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Leanback">
+
+            <intent-filter>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

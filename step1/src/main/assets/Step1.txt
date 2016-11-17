@@ -1,0 +1,21 @@
+------------------------------------------------------------------------------
+------------                                                     -------------
+------------                        STEP 1                       -------------
+------------                                                     -------------
+------------------------------------------------------------------------------
+
+Objetivo:
+-----------
+Enpezaremos creando una aplicación desde el principio. Tenemos un BrowseView que extiende BowseFragment
+y vamos a empezar a configurarlo para darle la apariencia que nos gustaría a nuestra aplicación.
+
+Tips:
+-------
+- El banner tiene que ser un recurso xhdpi y tiene que medir 320x180 y debe incluir el nombre de nuestra
+  aplicación en la imágen. Hay que utilizar la etiqueta android:banner en el application de nuestro manifest
+- El launcher color se especificar como un Theme del Main Activity de nuestra aplicación. Fíjate en los styles
+  ya debería haber uno creado que podemos utilizar.
+- Para configurar el icono que queremos que aparezca en BrowseView podemos utilizar el método 
+  setBadgeDrawable(...)
+- Para conseguir que aparezca el botón de search, es suficiente con setear un OnClickListener en 
+  setOnSearchClickedListener(...). Cambiar el color de este botón es sencillo con setSearchAffordanceColor

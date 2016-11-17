@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/verticalFlipper"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    >
+
+    <RelativeLayout
+        android:id="@+id/video_layout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <TextureView
+            android:id="@+id/video_textureView"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+
+    </RelativeLayout>
+
+    <pabloazana.presentation.views.customviews.CustomDurationViewPager
+        android:id="@+id/carousel_view_pager"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</ViewFlipper>

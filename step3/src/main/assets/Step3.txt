@@ -1,0 +1,35 @@
+------------------------------------------------------------------------------
+------------                                                     -------------
+------------                        STEP 3                       -------------
+------------                                                     -------------
+------------------------------------------------------------------------------
+
+Objetivo:
+-----------
+En este paso vamos a aprender como buscar contenido dentro de nuestra aplicación. Tenemos ya creada una SearchView
+que extiende de SearchFragment. Pintarlos es trivial para nosotros a estas alturas porque es exactamente
+igual a lo que hicimos en el Step2.
+Tambien vamos a aprender a interactuar con las cards, cambiando el fondo de la aplicación cada vez que
+tenemos las seleccionamos para dar una experiencia más cinemática.
+
+Tips:
+-------
+
+- Nuestro ArrayObjectAdapter ahora queda encapsulado dentro de AwesomePlacesObjectAdapter para compartir
+  la lógica de pintado con la BrowseView. El método getResultsAdapter() de SearchView debe devolver este
+  objeto.
+
+- Implementar el método doSearch utilizando el SearchRunnable y el Handler con un retardo de 3 segundos
+  para no lanzar la búsqueda cada vez que se introduce un nuevo carácter.
+
+- Implementar setupUIElements() tanto en BrowseView como en SearchView para setear el setOnItemViewClickedListener()
+  y llamar al método changeBackgroundImage() del presenter.
+
+- Para pintar el background podemos observar que tanto SearchViewPresenter como BrowseViewPresenter extienden
+  de BackgroundPresenter que ya tiene toda la lógica interna para maniular el Background.
+
+- Tanto en SearchView como en BrowseView debemos inicializar el BackGroundManager:
+        mBackgroundManager = BackgroundManager.getInstance(getActivity());
+        mBackgroundManager.attach(getActivity().getWindow());
+
+- Tenemos que implementar updateBackground() para setear el Drawable dentro de nuestro BackgroundManager.

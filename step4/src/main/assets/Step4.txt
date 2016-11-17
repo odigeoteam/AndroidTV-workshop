@@ -1,0 +1,17 @@
+------------------------------------------------------------------------------
+------------                                                     -------------
+------------                        STEP 4                       -------------
+------------                                                     -------------
+------------------------------------------------------------------------------
+
+Objetivo:
+-----------
+La idea es aprender una de las maneras de controlar la navegación al crear nuestro propio layout.
+
+
+Tips:
+-------
+
+- Implementar el método OnKeyBehaviour() de DetailView para enviar el KeyEvent al presentador
+- En el DetailsViewPresenter implementar el método keyNavigator() para decidirr qué hacer
+  dependiendo de la tecla pulsada.
